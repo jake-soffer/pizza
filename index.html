@@ -10,35 +10,58 @@
   </head>
   <body>
     <div class="container">
-      <form id="pizza-order">
-        <h4>Size:</h4>
-        <input type="radio" name="pizza-size" value="Personal"> Personal <br>
-        <input type="radio" name="pizza-size" value="Small"> Small <br>
-        <input type="radio" name="pizza-size" value="Medium"> Medium <br>
-        <input type="radio" name="pizza-size" value="Large"> Large <br>
-        <input type="radio" name="pizza-size" value="Extra Large"> Extra Large <br>
+      <div id="header">
+        <h1>Welcome to Jake's Virtual Pizza Establishment.</h1>
+        <img src="img/pizza.gif">
+        <h2>Hope you're hungry.</h2>
+      </div>
+      <div class="row">
+        <form id="pizza-order">
+        <div class="col-md-3">
+          <h4>Size:</h4>
+          <input type="radio" name="pizza-size" value="Personal"> Personal <br>
+          <input type="radio" name="pizza-size" value="Small"> Small <br>
+          <input type="radio" name="pizza-size" value="Medium"> Medium <br>
+          <input type="radio" name="pizza-size" value="Large"> Large <br>
+          <input type="radio" name="pizza-size" value="Extra Large"> Extra Large <br>
+        </div>
+        <div class="col-md-3">
+          <h4>Meats:</h4>
+          <input type="checkbox" name="meat-toppings" value="Pepperoni"> Pepperoni <br>
+          <input type="checkbox" name="meat-toppings" value="Sausage"> Sausage <br>
+          <input type="checkbox" name="meat-toppings" value="Bacon"> Bacon <br>
+          <input type="checkbox" name="meat-toppings" value="Ham"> Ham <br>
+          <input type="checkbox" name="meat-toppings" value="Linguica"> Linguica <br>
+          <input type="checkbox" name="meat-toppings" value="Anchovies"> Anchovies <br>
+        </div>
+        <div class="col-md-3">
+          <h4>Veggies and stuff:</h4>
+          <input type="checkbox" name="pizza-toppings" value="Mushroom"> Mushroom <br>
+          <input type="checkbox" name="pizza-toppings" value="Green Peppers"> Green Peppers <br>
+          <input type="checkbox" name="pizza-toppings" value="Olives"> Olives <br>
+          <input type="checkbox" name="pizza-toppings" value="Tomatoes"> Tomatoes <br>
+          <input type="checkbox" name="pizza-toppings" value="Onions"> Onions <br>
+          <input type="checkbox" name="pizza-toppings" value="Garlic"> Garlic <br>
+          <input type="checkbox" name="pizza-toppings" value="Extra Cheese"> Extra Cheese <br>
+        </div>
+        <div class="col-md-3">
+          <h4>Comments:</h4>
+          <input type="text">
+          <br>
+          <br>
+          <button type="submit" class="btn btn-danger">PIZZA!</button>
 
-        <h4>Toppings:</h4>
-        <input type="checkbox" name="pizza-toppings" value="Pepperoni"> Pepperoni <br>
-        <input type="checkbox" name="pizza-toppings" value="Sausage"> Sausage <br>
-        <input type="checkbox" name="pizza-toppings" value="Bacon"> Bacon <br>
-        <input type="checkbox" name="pizza-toppings" value="Ham"> Ham <br>
-        <input type="checkbox" name="pizza-toppings" value="Mushroom"> Mushroom <br>
-        <input type="checkbox" name="pizza-toppings" value="Green Peppers"> Green Peppers <br>
-        <input type="checkbox" name="pizza-toppings" value="Olives"> Olives <br>
-        <input type="checkbox" name="pizza-toppings" value="Tomatoes"> Tomatoes <br>
-        <input type="checkbox" name="pizza-toppings" value="Onions"> Onions <br>
-        <input type="checkbox" name="pizza-toppings" value="Garlic"> Garlic <br>
-        <input type="checkbox" name="pizza-toppings" value="Extra Cheese"> Extra Cheese <br>
-        <br>
-        <button type="submit" class="btn btn-danger">Place Order</button>
-      </form>
+        </div>
+        </form>
+
+      </div>
       <div id="order-summary">
+        <h3><em>Order confirmed. It'll be ready, eventually.</em></h3>
         <p><strong>Size: </strong><span id="user-size"></span></p>
-        <br>
-        <p><strong>Toppings: </strong><span id="user-toppings"></span></p>
-        <br>
+        <p><strong>Meat toppings: </strong><span id="meat-toppings"></span></p>
+        <p><strong>Veggies and stuff: </strong><span id="veggie-toppings"></span></p>
         <p><strong>Price: </strong>$<span id="user-price"></span></p>
+        <p><strong>Comments: </strong><span id="comments"></span></p>
       </div>
     </div>
   </body>
