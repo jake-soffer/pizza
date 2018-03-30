@@ -40,16 +40,16 @@ $(document).ready(function() {
     $("input:checkbox[name=pizza-toppings]:checked").each(function() {
       veggies.push($(this).val());
     }); if (typeof size === "undefined") {
-      alert("Please enter a size for your pizza.")
+      alert("Please enter a size.")
     } else {
       var newPizza = new pizzaObject(size, meats, veggies, price)
       newPizza.Price();
 
       $("#order-summary").show();
       $("#user-size").text(newPizza.size);
-      $("#meat-toppings").text(newPizza.meats)
-      $("#veggie-toppings").text(newPizza.veggies)
-      $("#user-price").text(newPizza.price);
+      $("#meat-toppings").text(newPizza.meats);
+      $("#veggie-toppings").text(newPizza.veggies);
+      $("#user-price").text(newPizza.price.toFixed(2));
       $("#comments").text(comments);
     }
   });

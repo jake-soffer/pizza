@@ -2,6 +2,16 @@
   text-align: center;
 }
 
+h1, h2, h3 {
+  background-color: #e1984e;
+  color: 	#b42323;
+  padding: 6px;
+}
+
+body {
+  background-color: #f1d0a2
+}
+
 #order-summary {
   display: none;
 }
