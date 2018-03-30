@@ -9,12 +9,16 @@ function pizzaObject(size, toppings, price) {
 pizzaObject.prototype.Price = function() {
   var pizzaSize = this.size;
   var pizzaToppings = this.toppings.length;
-  if (pizzaSize === "Small") {
+  if (pizzaSize === "Personal") {
+    this.price = (8+(pizzaToppings*1.50));
+  } else if (pizzaSize === "Small") {
     this.price = (12+(pizzaToppings*1.50));
   } else if (pizzaSize === "Medium") {
     this.price = (16+(pizzaToppings*1.50));
   } else if (pizzaSize === "Large") {
     this.price = (20+(pizzaToppings*1.50));
+  } else if (pizzaSize === "Extra Large") {
+    this.price = (24+(pizzaToppings*1.50));
   }
 }
 
@@ -23,7 +27,7 @@ pizzaObject.prototype.Price = function() {
 $(document).ready(function() {
   $("form#pizza-order").submit(function(event) {
     event.preventDefault();
-    var size = $("input:radio[name=pizza-size]").val();
+    var size = $("input:radio[name=pizza-size]:checked").val();
     var toppings = [];
     var price = 0;
     $("input:checkbox[name=pizza-toppings]:checked").each(function() {

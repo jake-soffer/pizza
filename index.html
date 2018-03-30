@@ -12,16 +12,24 @@
     <div class="container">
       <form id="pizza-order">
         <h4>Size:</h4>
+        <input type="radio" name="pizza-size" value="Personal"> Personal <br>
         <input type="radio" name="pizza-size" value="Small"> Small <br>
         <input type="radio" name="pizza-size" value="Medium"> Medium <br>
         <input type="radio" name="pizza-size" value="Large"> Large <br>
+        <input type="radio" name="pizza-size" value="Extra Large"> Extra Large <br>
 
         <h4>Toppings:</h4>
         <input type="checkbox" name="pizza-toppings" value="Pepperoni"> Pepperoni <br>
         <input type="checkbox" name="pizza-toppings" value="Sausage"> Sausage <br>
+        <input type="checkbox" name="pizza-toppings" value="Bacon"> Bacon <br>
+        <input type="checkbox" name="pizza-toppings" value="Ham"> Ham <br>
         <input type="checkbox" name="pizza-toppings" value="Mushroom"> Mushroom <br>
         <input type="checkbox" name="pizza-toppings" value="Green Peppers"> Green Peppers <br>
-        <input type="checkbox" name="pizza-toppings" value="Olives"> Olives
+        <input type="checkbox" name="pizza-toppings" value="Olives"> Olives <br>
+        <input type="checkbox" name="pizza-toppings" value="Tomatoes"> Tomatoes <br>
+        <input type="checkbox" name="pizza-toppings" value="Onions"> Onions <br>
+        <input type="checkbox" name="pizza-toppings" value="Garlic"> Garlic <br>
+        <input type="checkbox" name="pizza-toppings" value="Extra Cheese"> Extra Cheese <br>
         <br>
         <button type="submit" class="btn btn-danger">Place Order</button>
       </form>
@@ -30,7 +38,7 @@
         <br>
         <p><strong>Toppings: </strong><span id="user-toppings"></span></p>
         <br>
-        <p><strong>Price: </strong><span id="user-price"></span></p>
+        <p><strong>Price: </strong>$<span id="user-price"></span></p>
       </div>
     </div>
   </body>
