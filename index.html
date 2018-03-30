@@ -12,9 +12,9 @@
     <div class="container">
       <form id="pizza-order">
         <h4>Size:</h4>
-        <input type="radio" name="pizza-size" value="small"> Small <br>
-        <input type="radio" name="pizza-size" value="medium"> Medium <br>
-        <input type="radio" name="pizza-size" value="large"> Large <br>
+        <input type="radio" name="pizza-size" value="Small"> Small <br>
+        <input type="radio" name="pizza-size" value="Medium"> Medium <br>
+        <input type="radio" name="pizza-size" value="Large"> Large <br>
 
         <h4>Toppings:</h4>
         <input type="checkbox" name="pizza-toppings" value="Pepperoni"> Pepperoni <br>
@@ -26,9 +26,11 @@
         <button type="submit" class="btn btn-danger">Place Order</button>
       </form>
       <div id="order-summary">
-        <span id="user-size"></span>
-        <span id="user-toppings"></span>
-        <span id="user-price"></span>
+        <p><strong>Size: </strong><span id="user-size"></span></p>
+        <br>
+        <p><strong>Toppings: </strong><span id="user-toppings"></span></p>
+        <br>
+        <p><strong>Price: </strong><span id="user-price"></span></p>
       </div>
     </div>
   </body>
